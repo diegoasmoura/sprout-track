@@ -24,9 +24,8 @@ const LANGUAGE_NAMES: Record<string, { code: string; name: string }> = {
   en: { code: 'EN', name: 'English' },
   es: { code: 'ES', name: 'Español' },
   fr: { code: 'FR', name: 'Français' },
-  'pt-BR': { code: 'PT', name: 'Português' },
+  'pt-BR': { code: 'PT', name: 'Português (Brasil)' },
 };
-
 
 /**
  * LanguageSelector component
@@ -37,8 +36,8 @@ const LANGUAGE_NAMES: Record<string, { code: string; name: string }> = {
 export function LanguageSelector() {
   const { language, setLanguage, t } = useLocalization();
   
-  const currentLanguage = language.toLowerCase();
-  const currentLanguageInfo = LANGUAGE_NAMES[currentLanguage] || { code: currentLanguage.toUpperCase(), name: currentLanguage };
+  const currentLanguage = language;
+  const currentLanguageInfo = LANGUAGE_NAMES[currentLanguage] || { code: currentLanguage.toUpperCase().substring(0, 2), name: currentLanguage };
 
   const handleLanguageChange = async (newLanguage: string) => {
     await setLanguage(newLanguage);
@@ -66,7 +65,7 @@ export function LanguageSelector() {
           onValueChange={handleLanguageChange}
         >
           {SUPPORTED_LANGUAGES.map((lang) => {
-            const langInfo = LANGUAGE_NAMES[lang] || { code: lang.toUpperCase(), name: lang };
+            const langInfo = LANGUAGE_NAMES[lang] || { code: lang.toUpperCase().substring(0, 2), name: lang };
             return (
               <DropdownMenuRadioItem
                 key={lang}
