@@ -350,10 +350,11 @@ export default function AppConfigForm({
   };
 
   const handleNewPassword = () => {
-    if (newPassword.length < 6) {
-      setError(t('Password must be at least 6 characters'));
+    if (newAdminPassword.length < 4) {
+      setError(t('Password must be at least 4 characters'));
       return;
     }
+
     setPasswordStep('confirm');
     setError(null);
   };

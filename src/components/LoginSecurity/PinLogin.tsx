@@ -350,8 +350,8 @@ export default function PinLogin({
     }
 
     // Don't attempt authentication if PIN is too short
-    if (pin.length < 6) {
-      setError(t('Please enter a PIN with at least 6 digits'));
+    if (pin.length < 4) {
+      setError(t('Please enter a PIN with at least 4 digits'));
       setActiveInput('pin');
       return;
     }

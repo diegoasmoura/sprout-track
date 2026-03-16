@@ -341,10 +341,11 @@ export default function FamilyForm({
       return;
     }
     
-    if (tokenPassword.length < 6) {
-      setError(t('Password must be at least 6 characters long'));
+    if (password && password.length < 4) {
+      setError(t('Password must be at least 4 characters long'));
       return;
     }
+
     
     if (tokenPassword !== confirmTokenPassword) {
       setError(t('Passwords do not match'));

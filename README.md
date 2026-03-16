@@ -79,6 +79,13 @@ See [Initial Setup](documentation/Admin-Documentation/initial-setup.md) for deta
 | [API Logging](documentation/Admin-Documentation/api-logging.md) | Optional request/response logging |
 | [Admin Password Reset](documentation/Admin-Documentation/admin-password-reset.md) | Automatic reset when upgrading from older versions |
 
+## Localization
+
+- English (Default)
+- Español
+- Français
+- **Português (Brasil)** 🇧🇷 -- *Added for improved accessibility in Lusophone regions.*
+
 ## Tech Stack
 
 - Next.js with App Router
@@ -87,3 +94,7 @@ See [Initial Setup](documentation/Admin-Documentation/initial-setup.md) for deta
 - TailwindCSS
 - Docker
 - PWA with Push Notifications, Keep Awake, and Full Screen (on supported devices)
+
+## Recent Improvements
+
+- **UX/Security Balance**: Minimum password and PIN length reduced from 6 to 4 digits to improve daily usage convenience while maintaining basic security for local environments.
