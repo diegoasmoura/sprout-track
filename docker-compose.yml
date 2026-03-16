@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
       args:
         ENABLE_NOTIFICATIONS: ${ENABLE_NOTIFICATIONS:-true}
-    image: sprout-track
+    # image: sprout-track
     container_name: sprout-track
     restart: unless-stopped
     ports:
